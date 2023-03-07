@@ -57,22 +57,52 @@ onAuthStateChanged(auth, (user) => {
           >
             <v-list-item-title>รัฐธรรมนูญ 2560 (ล่าสุด)</v-list-item-title>
           </v-list-item>
-          <!-- <v-list-item @click="openInNewTab('https://codingbeautydev.com')">
-            <v-list-item-title>พ.ร.ป.พรรคการเมือง</v-list-item-title>
+          <v-list-item
+            @click="
+              openInNewTab(
+                'https://www.ect.go.th/ect_th/download/article/article_20171031151304.pdf'
+              )
+            "
+          >
+            <v-list-item-title>พ.ร.ป.พรรคการเมือง (ฉบับ 1)</v-list-item-title>
           </v-list-item>
-          <v-list-item @click="openInNewTab('https://codingbeautydev.com')">
-            <v-list-item-title>พ.ร.ป.การเลือกตั้ง</v-list-item-title>
-          </v-list-item> -->
+          <v-list-item
+            @click="
+              openInNewTab(
+                'https://www.ect.go.th/ect_th/download/article/article_20230130152111.pdf'
+              )
+            "
+          >
+            <v-list-item-title>พ.ร.ป.พรรคการเมือง (ฉบับ 2)</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+            @click="
+              openInNewTab(
+                'https://www.ect.go.th/ect_th/download/article/article_20180913155522.pdf'
+              )
+            "
+          >
+            <v-list-item-title>พ.ร.ป.การเลือกตั้ง ส.ส. (ฉบับ 1)</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+            @click="
+              openInNewTab(
+                'https://www.ect.go.th/ect_th/download/article/article_20230130152210.pdf'
+              )
+            "
+          >
+            <v-list-item-title>พ.ร.ป.การเลือกตั้ง ส.ส. (ฉบับ 2)</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
-      <!-- <v-btn
+      <v-btn
         variant="elevated"
         color="rgb(255,215,0)"
         style="margin-right: 1em"
-        to="/calandar"
+        to="/calendar"
       >
         ปฏิทิน
-      </v-btn> -->
+      </v-btn>
       <v-btn
         v-if="data.isLoggedIn"
         variant="elevated"

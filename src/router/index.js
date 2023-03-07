@@ -15,6 +15,10 @@ const router = createRouter({
       component: () => import('../views/VotePoll.vue'),
       meta: { requiresAuth: true }
     }, {
+      path: '/calendar',
+      name: 'calendar',
+      component: () => import('../views/MyCalendar.vue')
+    }, {
       path: '/lab1',
       name: 'lab 1',
       component: () => import('../components/Lab.vue')

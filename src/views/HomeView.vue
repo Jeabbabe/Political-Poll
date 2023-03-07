@@ -78,7 +78,7 @@
     <v-space />
     <!-- <v-container style="margin-block: 2rem">
       <v-row justify="center">
-        <v-btn color="#FFD700" size="x-large" style="margin-inline: 2rem" to="/calandar">
+        <v-btn color="#FFD700" size="x-large" style="margin-inline: 2rem" to="/calendar">
           ตรวจสอบปฏิทินการเลือกตั้ง
         </v-btn>
       </v-row>

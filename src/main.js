@@ -1,3 +1,4 @@
+/* eslint-disable vue/multi-word-component-names */
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -7,6 +8,7 @@ import router from './router'
 import { initializeApp } from "firebase/app";
 
 //import './assets/main.css'
+import 'v-calendar/dist/style.css';
 
 // Vuetify
 import 'vuetify/styles'
@@ -16,13 +18,12 @@ import * as directives from 'vuetify/directives'
 
 import '@mdi/font/css/materialdesignicons.css'
 
+import { SetupCalendar } from 'v-calendar';
+
 const vuetify = createVuetify({
   components,
   directives,
 })
-
-
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyDiSNgAUwJxuvYCBMobCe5sglLkmjnhRBA",
@@ -41,6 +42,8 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)
+
+app.use(SetupCalendar, {})
 
 app.mount('#app')
 
