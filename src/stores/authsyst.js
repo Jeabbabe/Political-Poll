@@ -25,7 +25,7 @@ export const keep = defineStore({
       createUserWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
           const user = userCredential.user;
-          alert("Registered!");
+          alert("สมัครสมาชิกเรียบร้อยแล้ว !!");
           router.push("/vote");
         })
         .catch((error) => {
@@ -39,7 +39,7 @@ export const keep = defineStore({
       const auth = getAuth();
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
-          alert("Session started!");
+          alert("เข้าสู่ระบบสำเร็จ !!");
           router.push("/vote");
           const user = userCredential.user;
         })
@@ -54,7 +54,7 @@ export const keep = defineStore({
       const auth = getAuth();
       signOut(auth)
         .then(() => {
-          alert("Session ended!");
+          alert("ออกจากระบบแล้ว !!");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -74,7 +74,7 @@ export const keep = defineStore({
           const user = result.user;
           // IdP data available using getAdditionalUserInfo(result)
           // ...
-          alert("Session started!");
+          alert("เข้าสู่ระบบสำเร็จ !!");
           router.push("/vote");
         })
         .catch((error) => {

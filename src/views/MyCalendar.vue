@@ -8,9 +8,9 @@ export default {
       attributes1: [
         {
           highlight: "red",
-          dates: new Date(2023, 2, 23),
+          dates: new Date(2023, 2, 20),
           popover: {
-            label: "ออก พ.ร.ฎ.เลือกตั้งใหม่",
+            label: "ออก พ.ร.ฎ.ยุบสภา",
           },
         },
         { 
@@ -18,20 +18,42 @@ export default {
           color: 'blue',
           fillMode: 'solid',
         },
-        dates: new Date(2023, 2, 31),
+        dates: new Date(2023, 2, 21),
         popover: {
           label: "กกต. กำหนดวันรับสมัครและประกาศวันเลือกตั้ง",
           },
         },
         {
           highlight: {
-            start: { fillMode: 'solid' },
-            base: { fillMode: 'light' },
-            end: { fillMode: 'solid' },
+            start: { color:'yellow', fillMode: 'solid' },
+            base: { color:'yellow', fillMode: 'outline' },
+            end: { color:'yellow', fillMode: 'solid' },
+          },
+          dates: { start: new Date(2023, 2, 25), end: new Date(2023, 3, 9) },
+          popover: {
+          label: "ลงทะเบียนขอใช้สิทธิ์เลือกตั้งล่วงหน้าและนอกเขต",
+          },
+        },
+        {
+          highlight: {
+            start: { color:'red', fillMode: 'solid' },
+            base: { color:'red', fillMode: 'light' },
+            end: { color:'red', fillMode: 'solid' },
           },
           dates: { start: new Date(2023, 3, 3), end: new Date(2023, 3, 7) },
           popover: {
-          label: "รับสมัคร ส.ส.",
+          label: "รับสมัคร ส.ส. แบ่งเขต",
+          },
+        },
+        {
+          highlight: {
+            start: { fillMode: 'solid' },
+            base: { fillMode: 'light' },
+            end: { fillMode: 'outline' },
+          },
+          dates: { start: new Date(2023, 3, 4), end: new Date(2023, 3, 7) },
+          popover: {
+          label: "รับสมัคร ส.ส. บัญชีรายชื่อ",
           },
         },
         { 
@@ -69,14 +91,14 @@ export default {
           color: 'red',
           fillMode: 'solid',
         },
-        dates: new Date(2023, 3, 26),
+        dates: new Date(2023, 4, 3),
         popover: {
-          label: "วันสุดท้ายของการเปลี่ยนแปลงหน่วยเลือกตั้ง สถานที่เลือกตั้ง และเพิ่มชื่อ-ถอนชื่อ",
+          label: "วันสุดท้ายของการเพิ่มชื่อ-ถอนชื่อผู้มีสิทธิ์เลือกตั้ง",
           },
         },
         {
           highlight: "yellow",
-          dates: new Date(2023, 3, 30),
+          dates: new Date(2023, 4, 7),
           popover: {
             label: "เลือกตั้งล่วงหน้า",
           },
@@ -87,14 +109,14 @@ export default {
             base: { color:'red', fillMode: 'light' },
             end: { color:'red', fillMode: 'outline' },
           },
-          dates: { start: new Date(2023, 4, 1), end: new Date(2023, 4, 6) },
+          dates: { start: new Date(2023, 4, 8), end: new Date(2023, 4, 13) },
           popover: {
           label: "แจ้งเหตุไม่ไปใช้สิทธิ์เลือกตั้ง",
           },
         },
         {
           highlight: "green",
-          dates: new Date(2023, 4, 7),
+          dates: new Date(2023, 4, 14),
           popover: {
             label: "เลือกตั้งทั่วไป",
           },
@@ -105,7 +127,7 @@ export default {
             base: { color:'red', fillMode: 'light' },
             end: { color:'red', fillMode: 'outline' },
           },
-          dates: { start: new Date(2023, 4, 8), end: new Date(2023, 4, 14) },
+          dates: { start: new Date(2023, 4, 15), end: new Date(2023, 4, 21) },
           popover: {
           label: "แจ้งเหตุไม่ไปใช้สิทธิ์เลือกตั้ง",
           },
@@ -118,9 +140,10 @@ export default {
 
 <template>
   <v-main>
+    <h1 style="text-align: center;">ปฏิทินการเลือกตั้ง พ.ศ. 2566</h1>
     <v-container>
       <v-row justify="center">
-        <DatePicker :attributes="attributes1" :columns="3" />
+        <DatePicker :attributes="attributes1" :rows="2" :columns="2" />
       </v-row>
     </v-container>
   </v-main>

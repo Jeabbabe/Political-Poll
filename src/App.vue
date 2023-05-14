@@ -2,8 +2,10 @@
 import { RouterView } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { keep } from "../src/stores/authsyst";
+//import { panorama } from "../src/assets/panorama_democracy.jpg";
 const data = keep();
 const auth = getAuth();
+//const panorama = panorama();
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const userid = user.userid;
@@ -18,14 +20,14 @@ onAuthStateChanged(auth, (user) => {
 
 <template>
   <v-layout>
-    <v-app-bar color="yellow" image="../src/assets/Panorama Democracy.jpg" app>
+    <v-app-bar color="yellow" image="../panorama_democracy.jpg" app flat>
       <template v-slot:image>
         <v-img gradient="to top right, rgba(255,215,0,.8), rgba(255,255,0,.8)"></v-img>
       </template>
       <v-container>
         <v-row>
-          <v-img src="../src/assets/logo_law.png" max-height="50" max-width="50" />
-          <v-img src="../src/assets/Election.png" max-height="50" max-width="50" />
+          <v-img src="../logo_law.png" max-height="50" max-width="50" />
+          <v-img src="../election.png" max-height="50" max-width="50" />
           <v-space style="margin-right: 1rem" />
           <h1>ลุยศึกเลือกตั้ง 2566</h1>
         </v-row>
