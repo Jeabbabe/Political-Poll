@@ -1,8 +1,9 @@
 <template>
-  <SiteBg style="padding-block: 2rem">
-    <SiteElection />
-    <CounterCards />
-    <Clips />
+  <SiteBg>
+    <div style="background-color: gray; padding: 10px 10px 10px 10px">
+      <SiteElection />
+      <Buttons />
+    </div>
   </SiteBg>
 </template>
 
@@ -11,15 +12,13 @@ import { defineComponent } from "vue";
 // Components
 import SiteElection from "../components/homepage/election.vue";
 import SiteBg from "../components/homepage/bg.vue";
-import CounterCards from "../components/homepage/counter.vue";
-import Clips from "../components/homepage/clips.vue";
+import Buttons from "../components/homepage/buttons.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
     SiteElection,
     SiteBg,
-    CounterCards,
-    Clips,
+    Buttons,
   },
 });
 </script>

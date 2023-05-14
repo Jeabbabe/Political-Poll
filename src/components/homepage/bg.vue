@@ -16,5 +16,6 @@ export default {
 .bg__image {
   background: url("../อนุสาวรีย์ประชาธิปไตย.jpg");
   background-size: cover;
+  height: 100vh;
 }
 </style>
